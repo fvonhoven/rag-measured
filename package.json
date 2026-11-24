@@ -1,0 +1,20 @@
+{
+  "name": "rag-measured",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Retrieval-augmented generation over React Native docs with retrieval quality measured separately from answer quality",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22.18" },
+  "scripts": {
+    "test": "node --test 'src/**/*.test.ts'",
+    "typecheck": "tsc --noEmit",
+    "measure": "node scripts/measure.ts",
+    "demo": "node scripts/demo.ts",
+    "fetch-corpus": "node scripts/fetch-corpus.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
