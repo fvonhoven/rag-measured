@@ -12,7 +12,7 @@
 
 ## What I would do differently
 
-**Record real embeddings from the start.** The first live run recorded only the chat calls, so a keyless replay fell back to hashed embeddings and printed a different table from the live one. Embeddings are now recorded too (`src/providers/embedReplay.ts`), and a replay misses loudly instead of mixing vector spaces. That should have been in the first version.
+**Record real embeddings from the start.** The first live run recorded only chat calls, so a keyless replay fell back to hashed embeddings and printed a different table. Embeddings are now recorded too (`src/providers/embedReplay.ts`), and a replay miss fails loudly instead of mixing vector spaces.
 
 **More questions, and multi-section ones.** Twenty answerable questions is enough to see a 5 point difference and not enough to trust a 2 point one. Questions whose answer spans two sections would make precision@5 more informative than it is with one relevant chunk per question.
 
